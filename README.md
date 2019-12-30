@@ -1,5 +1,5 @@
-# TrainYourOwnYOLO: Building a Custom Object Detector from Scratch [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](LICENSE)
-
+# TrainYourOwnYOLO: Building a Custom Object Detector from Scratch Tensorflow GPU [![license]
+Changing for training with a local computer. Modified for GPU.
 This repo let's you train a custom image detector using the state-of-the-art [YOLOv3](https://pjreddie.com/darknet/yolo/) computer vision algorithm. For a short write up check out this [medium post](https://medium.com/@muehle/how-to-train-your-own-yolov3-detector-from-scratch-224d10e55de2). 
 
 ### Pipeline Overview
@@ -39,7 +39,7 @@ To speed up training, it is recommended to use a **GPU with CUDA** support. For 
 
 Clone this repo with:
 ```
-git clone https://github.com/AntonMu/TrainYourOwnYOLO
+git clone https://github.com/TomasTrnkaPLC/TrainYourOwnYOLO
 cd TrainYourOwnYOLO/
 ```
 Create Virtual **(Linux/Mac)** Environment (requires [venv](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/) which is included in the standard library of Python 3.3 or newer):
@@ -67,10 +67,7 @@ If you are running TrainYourOwnYOLO on a machine with **GPU with CUDA** drivers 
 ```
 pip3 install -r requirements_gpu.txt
 ```
-Otherwise, run:
-```
-pip3 install -r requirements_cpu.txt
-```
+
 
 ## Quick Start (Inference only)
 To test the cat face detector on test images located in [`TrainYourOwnYOLO/Data/Source_Images/Test_Images`](/Data/Source_Images/Test_Images) run the `Minimal_Example.py` script in the root folder with:
