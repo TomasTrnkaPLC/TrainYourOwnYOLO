@@ -1,5 +1,20 @@
 # TrainYourOwnYOLO: Building a Custom Object Detector from Scratch Tensorflow GPU [![license]
-Changing for training with a local computer. Modified for GPU.
+
+Changing for training with a local computer. Modified for GPU. 
+Tested on Windows 10
+GTX 1660 6GB
+Cudnn cudnn-10.0-windows10-x64-v7.4.1.5
+Cuda cuda_10.0.130_411.31_win10
+
+Make sure the installed NVIDIA software packages match the versions listed above. In particular, TensorFlow will not load without the cuDNN64_7.dll file. To use a different version, see the Windows build from source guide.
+
+Add the CUDA, CUPTI, and cuDNN installation directories to the %PATH% environmental variable. For example, if the CUDA Toolkit is installed to C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0 and cuDNN to C:\tools\cuda, update your %PATH% to match:
+
+SET PATH=C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\bin;%PATH%
+SET PATH=C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\extras\CUPTI\libx64;%PATH%
+SET PATH=C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\include;%PATH%
+SET PATH=C:\tools\cuda\bin;%PATH%
+
 This repo let's you train a custom image detector using the state-of-the-art [YOLOv3](https://pjreddie.com/darknet/yolo/) computer vision algorithm. For a short write up check out this [medium post](https://medium.com/@muehle/how-to-train-your-own-yolov3-detector-from-scratch-224d10e55de2). 
 
 ### Pipeline Overview
