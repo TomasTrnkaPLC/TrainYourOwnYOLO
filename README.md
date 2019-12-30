@@ -62,9 +62,9 @@ Clone this repo with:
 git clone https://github.com/TomasTrnkaPLC/TrainYourOwnYOLO
 cd TrainYourOwnYOLO/
 ```
-Create Virtual **(Linux/Mac)** Environment (requires [venv](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/) which is included in the standard library of Python 3.3 or newer):
+Create Virtual **(Linux/Mac)** Environment (requires [venv](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/) which is included in the standard library of Python 3.6.1 or newer):
 ```
-python3 -m venv env
+python -m venv env
 source env/bin/activate
 ```
 Make sure that, from now on, you **run all commands from within your virtual environment**.
@@ -85,7 +85,7 @@ Make sure that, from now on, you **run all commands from within your virtual env
 If you are running TrainYourOwnYOLO on a machine with **GPU with CUDA** drivers installed run:
 
 ```
-pip3 install -r requirements_gpu.txt
+pip install -r requirements_gpu.txt
 ```
 
 
@@ -147,4 +147,3 @@ python <script_name.py> -h
 - ⭐ **star** this repo to get notifications on future improvements and
 - 🍴 **fork** this repo if you like to use it as part of your own project.
 
-![CatVideo](/Utils/Screenshots/CatVideo.gif)
