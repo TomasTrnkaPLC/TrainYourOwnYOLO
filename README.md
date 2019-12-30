@@ -1,4 +1,4 @@
-# TrainYourOwnYOLO: Building a Custom Object Detector from Scratch Tensorflow GPU [![license]
+# TrainYourOwnYOLO: Building a Custom Object Detector from Scratch Tensorflow GPU YoloV3
 
 Changing for training with a local computer. Modified for GPU. 
 Tested on Windows 10
