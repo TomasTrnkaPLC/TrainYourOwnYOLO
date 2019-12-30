@@ -5,6 +5,7 @@ Tested on Windows 10
 GTX 1660 6GB
 Cudnn cudnn-10.0-windows10-x64-v7.4.1.5
 Cuda cuda_10.0.130_411.31_win10
+Python python-3.6.1-amd64
 
 Make sure the installed NVIDIA software packages match the versions listed above. In particular, TensorFlow will not load without the cuDNN64_7.dll file. To use a different version, see the Windows build from source guide.
 
@@ -40,12 +41,16 @@ To build and test your object detection algorithm follow the below steps:
 ## Getting Started
 
 ### Requisites
-The only hard requirement is a running version of python 3.3 or newer. To install the latest python 3.x version go to 
+The only hard requirement is a running version of python 3.6.1 or newer. To install the latest python 3.6.1 version go to 
 - [python.org/downloads](https://www.python.org/downloads/) 
 
 and follow the installation instructions. 
 
-To speed up training, it is recommended to use a **GPU with CUDA** support. For example on [AWS](/2_Training/AWS/) you can use a `p2.xlarge` instance (Tesla K80 GPU with 12GB memory). Inference is very fast even on a CPU with approximately ~2 images per second. 
+Tested on Windows 10
+GTX 1660 6GB
+Cudnn cudnn-10.0-windows10-x64-v7.4.1.5
+Cuda cuda_10.0.130_411.31_win10
+Python python-3.6.1-amd64
 
 
 ### Installation
@@ -111,13 +116,6 @@ Each `*.py` script has various command line options that help tweak performance 
 ```
 python <script_name.py> -h
 ```
-
-## License
-
-Unless explicitly stated otherwise at the top of a file, all code is licensed under the MIT license. This repo makes use of [**ilmonteux/logohunter**](https://github.com/ilmonteux/logohunter) which itself is inspired by [**qqwweee/keras-yolo3**](https://github.com/qqwweee/keras-yolo3).
-
-## Acknowledgements
-Many thanks to [Niklas Wilson](https://github.com/NiklasWilson) for contributing towards making this repo compatible with Tensorflow 2.0. 
 
 ## Troubleshooting
 
