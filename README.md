@@ -78,7 +78,7 @@ Create Virtual **(Windows)** Environment (requires [venv](https://packaging.pyth
 py -m venv env
 .\env\Scripts\activate
 ```
-![PowerShell](/Utils/Screenshots/PowerShell.png)
+
 Make sure that, from now on, you **run all commands from within your virtual environment**.
 
 #### 2 Install Required Packages [Windows, Mac or Linux]
