@@ -16,6 +16,14 @@ To start the training, run the training script from within the [`TrainYourOwnYOL
 python Train_YOLO.py 
 ```
 Depending on your set-up, this process can take a few minutes to a few hours. The final weights are saved in [`TrainYourOwnYOLO/Data/Model_weights`](/Data/Model_weights). To list available command line options run `python Train_YOLO.py -h`.
+Training also generate a file model.h5 what include a save a Keras model into a single HDF5 file which will contain:
+
+the architecture of the model, allowing to re-create the model
+the weights of the model
+the training configuration (loss, optimizer)
+the state of the optimizer, allowing to resume training exactly where you left off.
+
+For future transformation to tensrflow format pd or other.
 
 If training is too slow on your local machine, consider using cloud computing services such as AWS to speed things up. To learn more about training on AWS navigate to [`TrainYourOwnYOLO/2_Training/AWS`](/2_Training/AWS).
 
