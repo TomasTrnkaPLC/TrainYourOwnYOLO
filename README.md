@@ -52,6 +52,16 @@ Cudnn cudnn-10.0-windows10-x64-v7.4.1.5
 Cuda cuda_10.0.130_411.31_win10
 Python python-3.6.1-amd64
 
+Training also generate a file model.h5 what include a save a Keras model into a single HDF5 file which will contain:
+
+the architecture of the model, allowing to re-create the model
+the weights of the model
+the training configuration (loss, optimizer)
+the state of the optimizer, allowing to resume training exactly where you left off.
+
+For future transformation to tensrflow format pd or other.
+
+
 
 ### Installation
 
