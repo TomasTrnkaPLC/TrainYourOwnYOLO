@@ -214,4 +214,4 @@ if __name__ == '__main__':
         file.close()
         end = timeit.timeit()
         print("Total Time")
-        print(float(end - start))
+        print(end - start)
