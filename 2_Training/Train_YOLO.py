@@ -3,7 +3,7 @@
 import os
 import sys
 import argparse
-
+import time
 def get_parent_dir(n=1):
     """ returns the n-th parent dicrectory of the current
     working directory """
@@ -148,7 +148,7 @@ if __name__ == '__main__':
     # Train with frozen layers first, to get a stable loss.
     # Adjust num epochs to your dataset. This step is enough to obtain a decent model.
     if True:
-        start = timeit.timeit()
+        start = time.time()
         model.compile(optimizer=Adam(lr=1e-3), loss={
             # use custom yolo_loss Lambda layer.
             'yolo_loss': lambda y_true, y_pred: y_pred})
@@ -217,6 +217,8 @@ if __name__ == '__main__':
             for item in step2_val_loss:
                 f.write("%s\n" % item) 
         file.close()
-        end = timeit.timeit()
-        print("Total Time")
-        print(end - start)
+        end = time.time()
+             # Time elapsed
+        seconds = end - start
+        seconds = round(seconds , 3)
+        print ("Process taken : {0} seconds".format(seconds)) 
