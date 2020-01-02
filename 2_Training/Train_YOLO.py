@@ -49,6 +49,8 @@ YOLO_filename = os.path.join(VoTT_Folder,'data_train.txt')
 print (YOLO_filename)
 Model_Folder = os.path.join(Data_Folder,'Model_Weights')
 YOLO_classname = os.path.join(Model_Folder,'data_classes.txt')
+YOLO_yaml = os.path.join(Model_Folder,'data.yaml')
+YOLO_xml = os.path.join(Model_Folder,'data.json')
 log_dir = Model_Folder
 anchors_path = os.path.join(keras_path,'model_data','yolo_anchors.txt') 
 weights_path = os.path.join(keras_path,'yolo.h5') 
@@ -128,7 +130,7 @@ if __name__ == '__main__':
     log_dir_time = os.path.join(log_dir,'{}'.format(int(time())))
     logging = TensorBoard(log_dir=log_dir_time)
     checkpoint = ModelCheckpoint(os.path.join(log_dir,'checkpoint.h5'),
-        monitor='val_loss', save_weights_only=True, save_best_only=True, period=5)
+    monitor='val_loss', save_weights_only=True, save_best_only=True, period=5)
     reduce_lr = ReduceLROnPlateau(monitor='val_loss', factor=0.1, patience=3, verbose=1)
     early_stopping = EarlyStopping(monitor='val_loss', min_delta=0, patience=10, verbose=1)
 
@@ -196,7 +198,10 @@ if __name__ == '__main__':
             initial_epoch=epoch1,
             callbacks=[logging, checkpoint, reduce_lr, early_stopping])
         model.save_weights(os.path.join(log_dir,'trained_weights_final_t1.h5'))
+        model.save_weights(os.path.join(log_dir,'trained_weights_final_t1.h5'))
+        model.save_weights(os.path.join(log_dir,'trained_weights_final_t2.hdf5'))
         model.save(os.path.join(log_dir,'model.h5'))
+        model.save(os.path.join(log_dir,'model2.hdf5'))
         step2_train_loss = history.history['loss']
         
         file = open(os.path.join(log_dir_time,'step2_loss.npy'), "w")
